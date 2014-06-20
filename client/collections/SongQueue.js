@@ -18,7 +18,9 @@ var SongQueue = Songs.extend({
   	this.remove(song);
   	if (this.length === 0) {
   		this.trigger('stop');
-  	}
+  	} else {
+      this.playNext();
+    }
   },
   
   playFirst: function() {
